@@ -80,20 +80,6 @@ void pad_right(vector<int>&row, const int size, const int num=0) {
     row.resize(size, num);
 }
 
-void pad_up(vector<vector<int>>& board, const int num_cols, const int num=0) {
-    for (auto& row : board) {
-        if (row.size() < num_cols) {
-            row.insert(row.begin(), num_cols-row.size(), num);
-        }
-    }
-}
-
-void pad_down(vector<vector<int>>& board, const int num_cols, const int num=0) {
-    for (auto& row : board) {
-        row.resize(num_cols, num);
-    }
-}
-
 // TODO: implement using STL algorithms
 bool move_left(vector<vector<int>>& board){
     for (int r=0; r < 4; r++) {
